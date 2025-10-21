@@ -1,5 +1,4 @@
 require('dotenv').config()
-
 import axios from 'axios'
 import { getTheme, requestInBase64 } from '../utils'
 import errorWidget from './error'
@@ -7,7 +6,7 @@ import buildCard from '../components/card'
 import GithubUserRequest from '../interfaces/GithubUser'
 import getGithubUserStats from '../fetchers/user-stats-fetcher'
 import { Repository } from '../interfaces/Repositories'
-import { Theme } from "../interfaces/Theme";
+import { Theme } from '../interfaces/Theme'
 import themes from '../data/themes'
 
 export default async function profileWidget(
@@ -15,45 +14,21 @@ export default async function profileWidget(
     data: string,
     themeString?: string
 ): Promise<string> {
-
-
-    // Set the theme
     let theme: Theme = getTheme(themes, 'default')
-    if (themeString) {
-        theme = getTheme(themes, themeString)
-    }
-    if (!theme) {
-        theme = getTheme(themes, 'default')
-    }
+    if (themeString) theme = getTheme(themes, themeString)
+    if (!theme) theme = getTheme(themes, 'default')
 
     const dataOptions: Array<string> = data.split(',')
-
-    // Return error if dataOptions argument is undefined
     if (dataOptions === undefined) {
-        return new Promise<string>((res) => {
-            res(
-                errorWidget(
-                    'Profile',
-                    '-25%',
-                    'Data option is missing!',
-                    '-25%'
-                )
-            )
-        })
+        return errorWidget('Profile', '-25%', 'Data option is missing!', '-25%')
     }
-
-    // Return error if more than 4 dataOptions were supplied
     if (dataOptions.length > 4) {
-        return new Promise<string>((res) => {
-            res(
-                errorWidget(
-                    'Profile',
-                    '-25%',
-                    `Can't have more than 4 data-options!`,
-                    '-40%'
-                )
-            )
-        })
+        return errorWidget(
+            'Profile',
+            '-25%',
+            `Can't have more than 4 data-options!`,
+            '-40%'
+        )
     }
 
     const width = 842
@@ -61,12 +36,10 @@ export default async function profileWidget(
 
     async function getDataOptions(): Promise<string> {
         let dataBoxes = ''
-
         const profile: GithubUserRequest = await getGithubUserStats(
             process.env.GITHUB_TOKEN,
             username
         )
-
         const stargazers: number[] = []
         profile.data.user.repositories.nodes.forEach(
             (repo: Repository, index) => {
@@ -115,29 +88,22 @@ export default async function profileWidget(
                             .contributionCalendar.totalContributions,
                         '#C5FFD9',
                         '#00F14F',
-                        `<g id="contributions-icon" transform="translate(-71 9)">
-                            <path id="path1" data-name="path1" d="M0,0H20.592V20.592H0Z" fill="none"/>
-                            <path id="path2" data-name="path2" d="M12.438,14.87v5.148H10.722V14.87H8.148l3.432-4.29,3.432,4.29Zm1.716,1.716h2.574V14.012h-.686L11.58,8.435,6.987,14.012H6a1.287,1.287,0,0,0,0,2.574h3V18.3H6a3,3,0,0,1-3-3V4.574A2.574,2.574,0,0,1,5.574,2H17.586a.858.858,0,0,1,.858.858V17.444a.858.858,0,0,1-.858.858H14.154ZM6.432,4.574V6.29H8.148V4.574Zm0,2.574V8.864H8.148V7.148Z" transform="translate(-0.426 -0.284)" fill="#00F14F"/>
-                        </g>`
+                        `<g transform="translate(-71 9)">
+              <path d="M0,0H20.592V20.592H0Z" fill="none"/>
+              <path d="M12.438,14.87v5.148H10.722V14.87H8.148l3.432-4.29,3.432,4.29Zm1.716,1.716h2.574V14.012h-.686L11.58,8.435,6.987,14.012H6a1.287,1.287,0,0,0,0,2.574h3V18.3H6a3,3,0,0,1-3-3V4.574A2.574,2.574,0,0,1,5.574,2H17.586a.858.858,0,0,1,.858.858V17.444a.858.858,0,0,1-.858.858H14.154ZM6.432,4.574V6.29H8.148V4.574Zm0,2.574V8.864H8.148V7.148Z" transform="translate(-0.426 -0.284)" fill="#00F14F"/>
+            </g>`
                     )
                     break
-
-                // Incorrect data item found
                 default:
-                    return new Promise<string>((res) => {
-                        res(
-                            errorWidget(
-                                'Profile',
-                                '-25%',
-                                `Invalid data item found!`,
-                                '-26%'
-                            )
-                        )
-                    })
+                    return errorWidget(
+                        'Profile',
+                        '-25%',
+                        `Invalid data item found!`,
+                        '-26%'
+                    )
             }
         }
 
-        // Add a box with a data counter
         function addDataBox(
             name: string,
             index: number,
@@ -146,64 +112,68 @@ export default async function profileWidget(
             color2: string,
             svg: string
         ) {
-            dataBoxes += `<g id="${name}" transform="translate(${(dataOptions.length - 1 - index) * -108
-                } 0)">
-                    <rect id="${name}-box" width="90" height="37" rx="18.5" transform="translate(-90 0)" fill="${color1}"/>
-                    <text id="${name}-text" data-name="${name}-text" transform="translate(${name === 'followers' ? '-43' : '-47'
-                } 25)" fill="${color2}" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif">
-                        <tspan x="0" y="0">${count}</tspan>
-                    </text>
-                    ${name !== 'commits' && name !== 'contributions'
-                    ? `<path id="${name}-icon" transform="translate(-71 ${name === 'stars' ? '10' : '8'
-                    })" fill="${color2}" d="${svg}"/>`
-                    : svg
-                }
-                </g>`
+            dataBoxes += `<g id="${name}" transform="translate(${
+                (dataOptions.length - 1 - index) * -108
+            } 0)">
+        <rect id="${name}-box" width="90" height="37" rx="18.5" transform="translate(-90 0)" fill="${color1}"/>
+        <text id="${name}-text" transform="translate(${
+                name === 'followers' ? '-43' : '-47'
+            } 25)" fill="${color2}" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif">
+          <tspan x="0" y="0">${count}</tspan>
+        </text>
+        ${
+            name !== 'commits' && name !== 'contributions'
+                ? `<path transform="translate(-71 ${
+                      name === 'stars' ? '10' : '8'
+                  })" fill="${color2}" d="${svg}"/>`
+                : svg
+        }
+      </g>`
         }
         return dataBoxes
     }
 
     try {
         const dataBoxes = await getDataOptions()
-
-        // If we receive a Promise, we return that
-        if (typeof dataBoxes != 'string') {
-            return dataBoxes
-        }
-
-        // Create the request
         const response = await axios.get(
             `https://api.github.com/users/${username}`
         )
-
-        // Grab the avatar
         const avatar = await requestInBase64(response.data.avatar_url)
-        return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-                                    <defs>
-                                        <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 200 200">
-                                            <image width="200" height="200" xlink:href="data:image/jpeg;base64,${avatar}"/>
-                                        </pattern>
-                                    </defs>
-                                    ${buildCard(width, height, theme.background)}
-                                    <g id="profile-card">
-                                        <rect id="profile-image" width="65" height="65" rx="30" transform="translate(52 47)" fill="url(#pattern)"/>
-                                        <text id="text-name" fill="${theme.title}" data-name="text-name" transform="translate(145 78)" font-size="26" font-family="Roboto-Medium, Roboto, sans-serif" font-weight="500"><tspan x="0" y="0">${response.data.name === null
-                ? response.data.login
-                : response.data.name
-            }</tspan></text>
-                                        <text id="text-url" data-name="text-url" transform="translate(145 102)" fill="#bfbfbf" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif"><tspan x="0" y="0">GitHub.com/${response.data.login
-            }</tspan></text>
-                                        <g id="data-boxes" transform="translate(${width - 52
-            } ${(height - 37) / 2})">
-                                            ${dataBoxes}
-                                        </g>
-                                    </g>
-                                </svg>`
+
+        return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
+      <style>
+        @media (prefers-color-scheme: dark) {
+          .bg { fill: #0f172a; }
+          .title { fill: #f1f5f9; }
+          .subtitle { fill: #cbd5e1; }
+        }
+        @media (prefers-color-scheme: light) {
+          .bg { fill: #f8fafc; }
+          .title { fill: #0f172a; }
+          .subtitle { fill: #64748b; }
+        }
+      </style>
+      ${buildCard(width, height, 'none')}
+      <rect class="bg" width="${width}" height="${height}" rx="12"/>
+      <g transform="translate(52 47)">
+        <defs>
+          <pattern id="pattern" width="100%" height="100%">
+            <image width="65" height="65" xlink:href="data:image/jpeg;base64,${avatar}"/>
+          </pattern>
+        </defs>
+        <rect width="65" height="65" rx="30" fill="url(#pattern)"/>
+      </g>
+      <text class="title" transform="translate(145 78)" font-size="26" font-family="Roboto-Medium, Roboto, sans-serif" font-weight="500">${
+          response.data.name ?? response.data.login
+      }</text>
+      <text class="subtitle" transform="translate(145 102)" font-size="16" font-family="Roboto-Regular, Roboto, sans-serif">GitHub.com/${
+          response.data.login
+      }</text>
+      <g transform="translate(${width - 52} ${
+            (height - 37) / 2
+        })">${dataBoxes}</g>
+    </svg>`
     } catch (error) {
-        return new Promise<string>((res) => {
-            res(
-                errorWidget('Profile', '-25%', 'GitHub API-call error!', '-24%')
-            )
-        })
+        return errorWidget('Profile', '-25%', 'GitHub API-call error!', '-24%')
     }
 }
