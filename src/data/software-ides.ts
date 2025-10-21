@@ -103,16 +103,7 @@ const softwareIDEs: IconData[] = [
         colorFrom: '#66D9EF',
         colorTo: '#1793D1',
         icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 256 256">
-        <defs>
-            <linearGradient id="b" x1="541" x2="607" y1="105" y2="303" gradientTransform="matrix(-.39377 0 0 .39375 978 417)" gradientUnits="userSpaceOnUse" href="#a"/>
-            <linearGradient id="a" x1="112" x2="112" y1="6" y2="129" gradientTransform="translate(287 -83)" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-                <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-            </linearGradient>
-        </defs>
-        <path fill="#1793d1" d="M128 0c-11 28-18 46-31 73q11 13 33 29-24-11-37-21c-16 34-41 82-93 175 41-23 72-38 101-43l-2-18v-1c1-26 15-46 31-45 16 2 28 24 27 50l-1 14q42 9 100 43l-22-40c-10-8-21-19-44-31q24 6 35 14C157 72 151 55 128 0"/>
-        <path fill="none" d="M200 152C145 77 132 16 128 2c30 68 30 69 72 150"/>
-        <path fill="url(#b)" d="m765 436-3 8-3 8-6 14-3 7-8 16v1q8 9 24 21-18-7-27-15l-1 2-1 3-3 5-1 2-21 40c24-13 50-33 97-16l-34-73-1-2z" transform="translate(-902 -587)scale(1.34737)"/>
+          <path d="M128 0c-11 28-18 46-31 73q11 13 33 29-24-11-37-21c-16 34-41 82-93 175 41-23 72-38 101-43l-2-18v-1c1-26 15-46 31-45 16 2 28 24 27 50l-1 14q42 9 100 43l-22-40c-10-8-21-19-44-31q24 6 35 14C157 72 151 55 128 0z" fill="#fff"/>
         </svg>`,
         width: 36,
         height: 36,
@@ -134,8 +125,8 @@ const softwareIDEs: IconData[] = [
         colorFrom: '#A98BFF',
         colorTo: '#5C2DFF',
         icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
-        <path d="M0 0v24h24V0zm3.72 3.11h5v1.84H7.33v6.27h1.4v1.84h-5v-1.84h1.44V4.95H3.72zm11.06 0H17v6.5q.02.9-.22 1.56a3 3 0 0 1-1.84 1.78 4 4 0 0 1-1.44.27q-1.18-.01-1.94-.44a5 5 0 0 1-1.28-1.06l1.39-1.55q.4.48.83.72.43.27.95.28.58.02 1-.4c.22-.27.33-.66.33-1.27zM2.22 19.5h9V21h-9z"/>
-        </svg>`,
+                <path d="M0 0v24h24V0zm3.72 3.11h5v1.84H7.33v6.27h1.4v1.84h-5v-1.84h1.44V4.95H3.72zm11.06 0H17v6.5q.02.9-.22 1.56a3 3 0 0 1-1.84 1.78 4 4 0 0 1-1.44.27q-1.18-.01-1.94-.44a5 5 0 0 1-1.28-1.06l1.39-1.55q.4.48.83.72.43.27.95.28.58.02 1-.4c.22-.27.33-.66.33-1.27zM2.22 19.5h9V21h-9z" fill="#fff"/>
+                </svg>`,
         width: 36,
         height: 36,
         xOffset: 0,
