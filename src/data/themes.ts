@@ -14,6 +14,18 @@ const themes: Theme[] = [
         subtitle: '#bfbfbf',
     },
     {
+        name: ['personaldark'],
+        background: '#0F172A',
+        title: '#CBD5E1',
+        subtitle: '#94A3B8',
+    },
+    {
+        name: ['personallight'],
+        background: '#E2E8F0',
+        title: '#475569',
+        subtitle: '#64748B',
+    },
+    {
         name: ['radical'],
         background: '#141321',
         title: '#fe428e',
