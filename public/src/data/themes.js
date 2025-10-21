@@ -14,6 +14,18 @@ const themes = [
         subtitle: '#bfbfbf',
     },
     {
+        name: ['personaldark'],
+        background: '#0F172A',
+        title: '#CBD5E1',
+        subtitle: '#94A3B8',
+    },
+    {
+        name: ['personallight'],
+        background: '#E2E8F0',
+        title: '#475569',
+        subtitle: '#64748B',
+    },
+    {
         name: ['radical'],
         background: '#141321',
         title: '#fe428e',
@@ -978,6 +990,12 @@ const themes = [
         background: '#fdf0d5',
         title: '#892948',
         subtitle: '#bfbfbf',
+    },
+    {
+        name: ['synthwave'],
+        background: '#2c263c',
+        title: '#cf2ba2',
+        subtitle: '#f1914c',
     },
 ];
 exports.default = themes;

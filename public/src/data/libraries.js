@@ -49,6 +49,122 @@ const libraries = [
         height: 34.631,
         xOffset: 0,
     },
+    {
+        name: ['Project Lombok', 'Lombok'],
+        colorFrom: '#F3B1A5',
+        colorTo: '#B23B23',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 256" width="36" height="36">
+      <g fill-rule="evenodd">
+        <path fill="#622819" d="m129 88-20 18-18 28-2 42 34 36 50 13 47 2 46-15 89-7 99 1 32-1 117 20 46 3 42 3 10-7 1-15-16-13-131-61-115-35-124-24-118-1z"/>
+        <path fill="#b23b23" d="m329 82-122-3 63 6 77 17-76-10-63-6-56 1-27 6-28 34-6 45 36 40 73 11 109-20 177-1 118 21 80 4 11-7-3-15-105-53-122-43z"/>
+        <path fill="#76140e" d="m137 114 24-2 5 13 18-5 22-5-21 9-5 11 6 8 21 6 23-2-32 14h-12l-5 15-16 17 5 15 11 5-17-2-14-16-15-3-14 4 9-12-16-11-4-19-6-15 2-11 8 14 3-17 9-11 12-17z"/>
+        <path fill="#f5cfce" d="m239 80 79 4 91 19 48 13-98-18-75-12zm-88 26 32-11 80 2 151 17 81 21 71 25-72-18-81-16-105-16-118-8z"/>
+        <path fill="#7c8f11" d="m115 132 16-11 5-13 15 9 20 15 20 2-9 21-2 18v17l-25 4-20 13-5-13-14-13-15-7 6-19-5-17z"/>
+        <path fill="#626e28" d="m130 193 6 10 16-8-15 5zm50-36 10-21-27-5 22 6zm-27-37-14-6-9 15 8-11zm9 73 15-4 2-23-3 21zm-39-66-7 9-11 36 20 13-17-14z"/>
+        <path fill="#4c551f" d="m135 134 13 1 5-7-1-7 4 9-2 7 8 11 8-1 9-8-5 11-11 5-2 9 7 8 10 1-11 1-10-4-1 14 5 6-6-3-9 6-7 2-4-8-7 4 6-7-3-8-13-7 6-21z"/>
+        <path fill="#748804" d="m148 138 10 13 1 16-11 8h-13l-21-7-38-6-30-14-29-40 7-56 49-26 59 27-1 8-9 6-50-19-23 15-9 29 16 28 22 10h32z"/>
+        <path fill="#544d25" d="m26 52-8 56 29 40 30 14 39 7 21 6h13l10-8-1-15-5-7 3 13-7 10-48-8-47-16-29-39z"/>
+        <path fill="#544d25" d="m94 49-25-5-24 15-2 19 6-15 23-15 50 19 2 1z"/>
+        <path fill="#dbd4ac" d="m41 95 8 25 19 10 65 8 16 6 4 11v-11l-5-6-38-8H78l-22-10zm32-69L26 52l9-2 27-17 15-4 48 25 4 6-5 6 7-5 1-8z"/>
+        <path fill="#803311" d="m223 214 100-34 87 13 107-6-102 12-89-6zm327-11 60 14 59 1 10-13-5 18-70-2z"/>
+      </g>
+    </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Jackson', 'FasterXML Jackson'],
+        colorFrom: '#3E8EFA',
+        colorTo: '#1B62D1',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 7c-3 2-4.5 4.5-4.5 7.5S9 20 12 22"/>
+        <path d="M24 7c3 2 4.5 4.5 4.5 7.5S27 20 24 22"/>
+        <path d="M15 5v4M15 27v4"/>
+        <path d="M21 5v4M21 27v4"/>
+        </g>
+    </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Gson', 'Google Gson'],
+        colorFrom: '#34A853',
+        colorTo: '#188038',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 11v14M9 11h7M9 25h7"/>
+        <path d="M27 11v14M27 11h-7M27 25h-7"/>
+        <circle cx="18" cy="15" r="1.5" fill="#fff" stroke="none"/>
+        <circle cx="18" cy="21" r="1.5" fill="#fff" stroke="none"/>
+        </g>
+    </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Jakarta Servlet', 'Servlet'],
+        colorFrom: '#F08C2B',
+        colorTo: '#C95F00',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 24c3 1.5 13 1.5 16 0"/>
+        <path d="M12 23l9-14 3 9z" fill="none"/>
+        </g>
+    </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Guava', 'Google Guava'],
+        colorFrom: '#4285F4',
+        colorTo: '#0B57D0',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="18" r="4"/>
+        <circle cx="24" cy="12" r="4"/>
+        <circle cx="24" cy="24" r="4"/>
+        <path d="M15.5 16.5l5-2.5M15.5 19.5l5 2.5"/>
+        </g>
+    </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['MongoJack', 'MongoDB Jackson'],
+        colorFrom: '#47A248',
+        colorTo: '#2C7A2E',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 30s7-4 7-12c0-7-5-11-7-12-2 1-7 5-7 12 0 8 7 12 7 12z"/>
+        <path d="M18 9c0 6-1.5 10.5-4.5 13.5"/>
+        <path d="M24 7.5c2 1.5 3.5 3.5 3.5 6.5"/>
+        </g>
+    </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
+    {
+        name: ['Reflections', 'org.reflections'],
+        colorFrom: '#7C4DFF',
+        colorTo: '#4A2FC9',
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+        <g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="16" cy="16" r="6.5"/>
+        <path d="M21 21l6 6"/>
+        <path d="M12 16h8M16 12v8"/>
+        </g>
+    </svg>`,
+        width: 36,
+        height: 36,
+        xOffset: 0,
+    },
 ];
 exports.default = libraries;
 //# sourceMappingURL=libraries.js.map

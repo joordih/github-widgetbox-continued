@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
         "target": "ES2018",
-        "module": "None",
+        "module": "CommonJS",
         "moduleResolution": "Node",
-        "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+        "lib": ["ESNext", "ESNext.AsyncIterable"],
         "esModuleInterop": true,
         "allowJs": true,
         "outDir": "public",
@@ -18,5 +18,5 @@
         "types": ["dotenv", "express", "node"]
     },
     "exclude": ["node_modules", "./public/**/*"],
-    "include": ["api/**/*", "public/**/*"]
+    "include": ["api/**/*"]
 }
