@@ -73,7 +73,7 @@ async function profileWidget(username, data, themeString) {
         const dataBoxes = await getDataOptions();
         const response = await axios_1.default.get(`https://api.github.com/users/${username}`);
         const avatar = await (0, utils_1.requestInBase64)(response.data.avatar_url);
-        return `return <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+        return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
       <style>
         @media (prefers-color-scheme: dark) {
           .bg { fill: #0f172a; }
