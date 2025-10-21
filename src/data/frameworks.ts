@@ -266,15 +266,12 @@ const frameworks: IconData[] = [
         name: ['Guice', 'Google Guice'],
         colorFrom: '#F8DFA6',
         colorTo: '#DB4437',
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 80" width="36" height="36">
-                <text x="0" y="60" font-family="Product Sans, Arial, sans-serif" font-weight="bold" font-size="64">
-                    <tspan fill="#4285F4">G</tspan>
-                    <tspan fill="#34A853">u</tspan>
-                    <tspan fill="#FBBC05">i</tspan>
-                    <tspan fill="#EA4335">c</tspan>
-                    <tspan fill="#4285F4">e</tspan>
-                </text>
-            </svg>`,
+        icon: `<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" viewBox="0 0 24 24">
+	<path fill="#fff" d="M12.222 5.977a5.4 5.4 0 0 1 3.823 1.496l2.868-2.868A9.6 9.6 0 0 0 12.222 2a10 10 0 0 0-8.937 5.51l3.341 2.59a5.96 5.96 0 0 1 5.596-4.123" opacity="0.7" />
+	<path fill="#fff" d="M3.285 7.51a10.01 10.01 0 0 0 0 8.98l3.341-2.59a5.9 5.9 0 0 1 0-3.8z" />
+	<path fill="#fff" d="M15.608 17.068A6.033 6.033 0 0 1 6.626 13.9l-3.34 2.59A10 10 0 0 0 12.221 22a9.55 9.55 0 0 0 6.618-2.423z" opacity="0.5" />
+	<path fill="#fff" d="M21.64 10.182h-9.418v3.868h5.382a4.6 4.6 0 0 1-1.996 3.018l-.01.006l.01-.006l3.232 2.51a9.75 9.75 0 0 0 2.982-7.35q0-1.032-.182-2.046" opacity="0.25" />
+        </svg>`,
         width: 36,
         height: 36,
         xOffset: 0,
